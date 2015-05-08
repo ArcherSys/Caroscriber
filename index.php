@@ -12,6 +12,14 @@
 <link rel="import" href="/core/components/font-roboto/roboto.html">
 </head>
 <body fullbleed layout horizontal vertical>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
 <style>
 core-toolbar{
 font-family: RobotoDraft, Segoe UI, Trebuchet MS;
@@ -40,6 +48,10 @@ color: white;
     })();
 </script>
 <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+<div class="fb-page" data-href="https://www.facebook.com/archersysos" data-hide-cover="false" data-show-facepile="true" data-show-posts="true"><div class="fb-xfbml-parse-ignore"><blockquote cite="https://www.facebook.com/archersysos"><a href="https://www.facebook.com/archersysos">ArcherSys</a></blockquote></div></div>
+<div class="fb-comments" data-href="https://www.facebook.com/pages/Caroscriber/" data-numposts="5" data-colorscheme="light"></div>
+<div class="fb-like" data-href="https://www.facebook.com/archersysos" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+<div class="fb-share-button" data-href="https://play.spotify.com/track/5XW3v6HJQWmPlOFnLG4k4D" data-layout="button_count"></div><div class="fb-send" data-href="https://www.facebook.com/archersysos"></div>
 </section>
 </core-header-panel>
 </body>
