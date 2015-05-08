@@ -1,12 +1,11 @@
-Caroscriber.controller("HomeController",["$scope",function($scope){
-   
-   $scope.slides = [
-     {
-    name:"PresidentialElections",
-    number: 0,
-    caption: "Historical Elections", 
-    content: "media/img/slide1.png"
-}
 
-];
+Caroscriber.controller("HomeController",["$scope",function($scope){
+  
+   $("#usedoc").click(function(){
+
+    $scope.caroscriber_document = "/PDFView/ViewerJS/" + $("input[name=document]").val();
+     $("#doc").attr("src",$scope.caroscriber_document);
+});
+
+
 }]);

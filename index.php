@@ -2,16 +2,18 @@
 <html>
 <head>
 <title>Carosciber</title>
+<script src="/core/js/jquery.js"></script>
+<script src="/core/js/angularjs/angular.min.js"></script>
 <script src="/core/components/webcomponentsjs/webcomponents.js"></script>
 <link rel="import" href="/core/components/polymer/polymer.html">
 
 <link rel="import" href="/core/components/core-toolbar/core-toolbar.html">
 
-<link rel="import" href="/core/components/core-toolbar/core-header-panel.html">
+<link rel="import" href="/core/components/core-header-panel/core-header-panel.html">
 
 <link rel="import" href="/core/components/font-roboto/roboto.html">
 </head>
-<body fullbleed layout horizontal vertical>
+<body fullbleed layout vertical ng-app="Carouscriber">
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -26,15 +28,30 @@ font-family: RobotoDraft, Segoe UI, Trebuchet MS;
 background-color: crimson;
 color: white;
 }
+.caroscriber-document-input{
+  height: 40px;
+  width: 500px;
+  background-color: silver;
+  font-family: Trebuchet MS, Segoe UI;
+  color: white;
+  font-size: 25px;
+}
+#usedoc{
+height: 50px;
+background-color: lightgreen;
+font-family: Segoe UI;
+color: white;
+}
 </style>
 <core-header-panel flex>
-<core-toolbar flex>
+<core-toolbar>
   <div flex>
      Caroscriber
    </div>
 </core-toolbar>
-<section>
-<iframe src="/PDFView/ViewerJS/apush_study_guide4.pdf" width="1000" height="500"></iframe>
+<section ng-controller="HomeController">
+<input type="text" class="caroscriber-document-input" name="document"><button id="usedoc"> Open PDF </button>
+<iframe id="doc" ng-src="{{ caroscriber_document }}" width="1000" height="500"></iframe>
 <div id="disqus_thread"></div>
 <script type="text/javascript">
     /* * * CONFIGURATION VARIABLES * * */
@@ -54,5 +71,9 @@ color: white;
 <div class="fb-share-button" data-href="https://play.spotify.com/track/5XW3v6HJQWmPlOFnLG4k4D" data-layout="button_count"></div><div class="fb-send" data-href="https://www.facebook.com/archersysos"></div>
 </section>
 </core-header-panel>
+
+<script src="js/app.js"></script>
+
+<script src="js/controllers/HomeController.js"></script>
 </body>
 </html>
